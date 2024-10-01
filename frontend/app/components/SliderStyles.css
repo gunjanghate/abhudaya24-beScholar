@@ -1,4 +1,4 @@
-/* SliderStyles.css */
+
 .slider-container {
     width: 80%;
     margin: 0 auto;
@@ -7,7 +7,7 @@
   .slide {
     display: flex;
     align-items: center;
-    height: 300px; /* Adjust as needed */
+    height: 300px; 
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -19,25 +19,25 @@
   }
   
   .image-container {
-    flex: 1; /* Take up 50% of the space */
+    flex: 1; 
     padding: 10px;
   }
   
   .text-content {
-    flex: 1; /* Take up 50% of the space */
+    flex: 1; 
     padding: 20px;
   }
   
   .slide-image {
     border-radius: 8px;
-    object-fit: cover; /* Cover the area while preserving aspect ratio */
+    object-fit: cover; 
   }
   
   .text-content h2 {
-    color: orange; /* Change the color of the heading */
+    color: orange; 
   }
   
   .text-content p {
-    font-size: 1.5em; /* Increase the font size of the paragraph */
+    font-size: 1.5em; 
   }
   

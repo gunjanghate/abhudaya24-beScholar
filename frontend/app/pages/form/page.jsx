@@ -20,7 +20,7 @@ const FormComponent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3006/api/students', formData);
+      const response = await axios.post('http://localhost:3001/api/students', formData);
       console.log('Student created:', response.data);
       alert('Details verified successfully!');
     } catch (error) {

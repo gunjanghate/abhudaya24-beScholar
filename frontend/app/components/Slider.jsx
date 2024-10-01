@@ -1,10 +1,10 @@
-// components/Slider.jsx
 
-"use client"; // Mark this component as a Client Component
+
+"use client"; 
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import './SliderStyles.css'; // Ensure this CSS file is created
+import './SliderStyles.css'; 
 
 const slides = [
   {

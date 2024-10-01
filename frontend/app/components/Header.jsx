@@ -24,7 +24,7 @@ const Header = () => {
           />
 
         </Link>
-        {/* <span className="grey-txt font bold text-2xl pt-6 ">Be Scholar</span> */}
+        
       </div>
       <div className="nav flex pt-2 gap-24 font-bold">
         <ul className="flex mt-12 text-xl  md:gap-16 gap-12 font-medium">

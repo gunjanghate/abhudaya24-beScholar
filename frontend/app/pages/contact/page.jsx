@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
-// import ContactForm from '@/app/components/ContactForm'
+
 
 const Page = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +18,7 @@ const Page = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic (e.g., send data to an API)
+ 
     console.log('Form submitted:', formData);
   };
 
@@ -26,7 +26,7 @@ const Page = () => {
     <>
       <Header />
       <div className="min-h-screen">
-        {/* <ContactForm /> */}
+        
         <div className="max-w-4xl mx-auto p-6 bg-white text-gray-800">
           <header className="text-center mb-10 bg-orange-500 p-6 rounded-lg">
             <h1 className="text-white text-4xl font-bold">Contact Us</h1>

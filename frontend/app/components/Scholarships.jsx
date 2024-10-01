@@ -1,83 +1,4 @@
-// // pages/scholarships.js
-// "use client"; // Use this if you're using Next.js 13 with React Server Components
-
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-
-// const Scholarships = () => {
-//   const [scholarships, setScholarships] = useState([]);
-//   const [studentPercentage, setStudentPercentage] = useState(0); // Initialize to 0 or some default value
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState('');
-//   const studentId = '66f8ef4c65ca84d4482b5a7d'; // Replace this with the actual student ID or method to get it
-
-//   useEffect(() => {
-//     const fetchScholarships = async () => {
-//       try {
-//         const response = await axios.get('http://localhost:3006/api/scholarship');
-//         setScholarships(response.data);
-//       } catch (err) {
-//         setError('Error fetching scholarships');
-//         console.error(err);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     const fetchStudentData = async () => {
-//       try {
-//         const response = await axios.get(`http://localhost:3006/api/students/${studentId}`); // Use the correct endpoint
-//         setStudentPercentage(response.data.percentage); // Assuming the structure of the response
-//       } catch (err) {
-//         console.error("Error fetching student data:", err);
-//       }
-//     };
-
-//     fetchScholarships();
-//     fetchStudentData();
-//   }, [studentId]); // Fetch data when the studentId changes
-
-//   const handleApply = (scholarship) => {
-//     const isEligible = checkEligibility(scholarship, studentPercentage);
-//     if (isEligible) {
-//       alert(`You are eligible to apply for ${scholarship.name}!`);
-//       // Here you can add logic to submit the application, e.g., sending a POST request to apply
-//     } else {
-//       alert(`You are not eligible to apply for ${scholarship.name}. You need at least ${scholarship.percentageEligibility}% to apply.`);
-//     }
-//   };
-
-//   const checkEligibility = (scholarship, studentPercentage) => {
-//     console.log('Student Percentage:', studentPercentage);
-//     return studentPercentage >= scholarship.percentageEligibility;
-//   };
-
-//   if (loading) return <div className='flex justify-center items-center text-2xl'>Loading...</div>;
-//   if (error) return <div>{error}</div>;
-
-//   return (
-//     <div className='mt-10 mb-5 flex flex-col justify-center items-center'>
-//       <h1 className='text-3xl font-bold shadow-md stroke-gray-700'>Scholarship Dashboard</h1>
-//       <ul>
-//         <div className="sch-dash flex flex-col gap-8 bg-orange-200 px-5 py-3 border-2 border-red-500 rounded-md">
-//         {scholarships.map((scholarship) => (
-//           <li className='flex flex-col gap-2' key={scholarship._id}>
-//             <h3 className='font-semibold text-xl'>{scholarship.name}</h3>
-//             <p>{scholarship.description}</p>
-//             <p className='font-bold'>Eligibility: {scholarship.percentageEligibility}%</p>
-//             <p >Max Amount: ₹{scholarship.maxAmount}</p>
-//             <p>Guidelines: {scholarship.guidelines}</p>
-//             <button className='bg-blue-400 p-1 rounded-lg hover:bg-blue-500 hover:text-white transition-all font-bold' onClick={() => handleApply(scholarship)}>Apply</button>
-//           </li>
-//         ))}
-//          </div>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default Scholarships;
-"use client"; // Use this if you're using Next.js 13 with React Server Components
+"use client"; 
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -94,10 +15,10 @@ import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 
 const Scholarships = () => {
   const [scholarships, setScholarships] = useState([]);
-  const [studentPercentage, setStudentPercentage] = useState(0); // Initialize to 0 or some default value
+  const [studentPercentage, setStudentPercentage] = useState(0); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const studentId = "66f8ef4c65ca84d4482b5a7d"; // Replace this with the actual student ID or method to get it
+  const studentId = "66f8ef4c65ca84d4482b5a7d"; 
 
   useEffect(() => {
     const fetchScholarships = async () => {
@@ -118,8 +39,8 @@ const Scholarships = () => {
       try {
         const response = await axios.get(
           `http://localhost:3001/api/students/${studentId}`
-        ); // Use the correct endpoint
-        setStudentPercentage(response.data.percentage); // Assuming the structure of the response
+        );
+        setStudentPercentage(response.data.percentage); 
       } catch (err) {
         console.error("Error fetching student data:", err);
       }
@@ -127,13 +48,13 @@ const Scholarships = () => {
 
     fetchScholarships();
     fetchStudentData();
-  }, [studentId]); // Fetch data when the studentId changes
+  }, [studentId]); 
 
   const handleApply = (scholarship) => {
     const isEligible = checkEligibility(scholarship, studentPercentage);
     if (isEligible) {
       alert(`You are eligible to apply for ${scholarship.name}!`);
-      // Here you can add logic to submit the application, e.g., sending a POST request to apply
+      
     } else {
       alert(
         `You are not eligible to apply for ${scholarship.name}. You need at least ${scholarship.percentageEligibility}% to apply.`
